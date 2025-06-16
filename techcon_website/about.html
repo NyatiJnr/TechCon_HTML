@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechCon 2024 - Home</title>
+    <title>About TechCon 2024</title>
     <style>
         /* Basic CSS for layout and accessibility */
         body {
@@ -39,12 +39,22 @@
             margin: 0 auto;
             padding: 2rem;
         }
-        section {
+        article {
             margin-bottom: 2rem;
         }
-        video {
+        img {
             max-width: 100%;
             height: auto;
+            display: block;
+            margin: 1rem 0;
+        }
+        .speaker-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .speaker {
+            text-align: center;
         }
         footer {
             background-color: #2c3e50;
@@ -59,10 +69,10 @@
 </head>
 <body>
     <header>
-        <h1>TechCon 2024</h1>
+        <h1>About TechCon 2024</h1>
         <nav>
             <ul>
-                <li><a href="about.html" aria-label="Learn more about TechCon 2024">About</a></li>
+                <li><a href="index.html" aria-label="Return to TechCon 2024 homepage">Home</a></li>
                 <li><a href="schedule.html" aria-label="View the TechCon 2024 schedule">Schedule</a></li>
                 <li><a href="register.html" aria-label="Register for TechCon 2024">Register</a></li>
                 <li><a href="contact.html" aria-label="Contact the TechCon 2024 team">Contact</a></li>
@@ -71,20 +81,42 @@
     </header>
 
     <main>
-        <section>
-            <h2>Welcome to TechCon 2024</h2>
+        <article>
+            <h2>History of TechCon</h2>
             <p>
-                Join us at TechCon 2024, the premier technology conference bringing together innovators, developers, and industry leaders. Explore cutting-edge advancements, network with peers, and gain insights from world-class speakers. This year's event will be held from June 10-12 in San Francisco, CA.
+                TechCon began in 2005 as a small gathering of tech enthusiasts in Silicon Valley, aiming to foster innovation and collaboration. Over the years, it has grown into a globally recognized conference, hosting thousands of attendees from diverse tech fields. From its humble beginnings in a community center to its current status at the San Francisco Convention Center, TechCon has been a platform for groundbreaking ideas and networking.
             </p>
-            <video controls poster="techcon-promo-poster.jpg" aria-describedby="video-description">
-                <source src="techcon-promo.mp4" type="video/mp4">
-                <track src="techcon-promo-captions.vtt" kind="subtitles" srclang="en" label="English">
-                Your browser does not support the video tag.
-            </video>
-            <p id="video-description">
-                Promotional video showcasing highlights from past TechCon events, including keynote speeches, panel discussions, and networking sessions.
+            <img src="techcon-2005.jpg" alt="Attendees at the inaugural TechCon 2005 event in a community center, engaging in discussions">
+            <img src="techcon-2020.jpg" alt="Large crowd at TechCon 2020 keynote session in a modern convention center">
+        </article>
+
+        <article>
+            <h2>Our Mission</h2>
+            <p>
+                TechCon 2024 is dedicated to advancing technology for a better future. Our mission is to connect innovators, share knowledge, and inspire solutions to global challenges. We strive to create an inclusive environment where diverse voices in tech can collaborate and thrive.
             </p>
-        </section>
+            <img src="mission-icon.png" alt="Icon representing innovation and collaboration, featuring a lightbulb and interconnected nodes">
+        </article>
+
+        <article>
+            <h2>Past Speakers</h2>
+            <div class="speaker-grid">
+                <div class="speaker">
+                    <img src="speaker-jane-doe.jpg" alt="Jane Doe, a woman with short hair, speaking at TechCon 2018">
+                    <h3>Jane Doe</h3>
+                    <p>
+                        Jane Doe, CEO of InnovateTech, spoke at TechCon 2018 about AI-driven sustainability solutions. Her work has revolutionized energy-efficient computing, earning her the Tech Innovator Award in 2019.
+                    </p>
+                </div>
+                <div class="speaker">
+                    <img src="speaker-john-smith.jpg" alt="John Smith, a man in a suit, presenting at TechCon 2020">
+                    <h3>John Smith</h3>
+                    <p>
+                        John Smith, a pioneer in quantum computing, delivered a keynote at TechCon 2020. As CTO of QuantumLabs, he has advanced quantum algorithms, significantly impacting cryptography and data processing.
+                    </p>
+                </div>
+            </div>
+        </article>
     </main>
 
     <footer>
